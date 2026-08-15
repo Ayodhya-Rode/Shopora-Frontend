@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  --color-surface: #fafaf8;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f7f7f7;
+  --color-text-primary: #111111;
+  --color-text-secondary: #6b6b6b;
+  --color-border-default: #e5e5e5;
+  --color-accent: #b88a5a;
+
+  --color-status-success: #2e7d5b;
+  --color-status-success-bg: #f0fdf4;
+  --color-status-error: #d64545;
+  --color-status-error-bg: #fef2f2;
+  --color-status-warning: #c58a24;
+  --color-status-warning-bg: #fffbeb;
+  --color-status-info: #1d4ed8;
+  --color-status-info-bg: #eff6ff;
+
+  --color-section-tint: #f8f2ea;
+  --color-section-tint-border: #eadac4;
+  --color-chat-accent: #2563eb;
+  --color-chat-accent-hover: #1d4ed8;
+
+  --color-btn-primary: #111111;
+  --color-btn-primary-text: #ffffff;
+  --color-panel-dark: #111111;
+}
+
+.dark {
+  --color-surface: #111111;
+  --color-surface-card: #1a1a1a;
+  --color-surface-muted: #222222;
+  --color-text-primary: #fafaf8;
+  --color-text-secondary: #a3a3a3;
+  --color-border-default: #333333;
+  --color-accent: #d9a86c;
+
+  --color-status-success: #4ade80;
+  --color-status-success-bg: #14532d;
+  --color-status-error: #f87171;
+  --color-status-error-bg: #450a0a;
+  --color-status-warning: #facc15;
+  --color-status-warning-bg: #451a03;
+  --color-status-info: #60a5fa;
+  --color-status-info-bg: #1e3a8a;
+
+  --color-section-tint: #1f1a14;
+  --color-section-tint-border: #3a3226;
+  --color-chat-accent: #3b82f6;
+  --color-chat-accent-hover: #60a5fa;
+
+  --color-btn-primary: #d9a86c;
+  --color-btn-primary-text: #111111;
+  --color-panel-dark: #161b26;
+}
+
+/* body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+} */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+* {
+  transition: background-color 1s ease, border-color 0.6s ease, color 0.6s ease;
+}
+
+@keyframes theme-pop {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0) scale(1.05);
+  }
+  15% {
+    transform: translateX(0) scale(1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.95);
+  }
+}
+
+.theme-celebration {
+  animation: theme-pop 2.5s ease forwards; 
+}
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
