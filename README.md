@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+# Shopora — E-Commerce Platform (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Shopora is a full-featured multi-role e-commerce platform built with React and TypeScript, supporting Users, Sellers, and Admins.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 18** + **TypeScript**
+- **Vite** — build tool
+- **Tailwind CSS** — styling
+- **React Router** — routing
+- **Axios** — API calls
+- **React Hot Toast** — notifications
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User authentication (register, login, profile, address book)
+- Product browsing, categories, search, wishlist
+- Cart & checkout with Razorpay payment integration
+- Order tracking & order history
+- Product reviews
+- Seller dashboard — add/edit products, manage orders, sales analytics
+- Admin dashboard — manage sellers, categories
+- Contact Us form & Newsletter subscription (email notifications via backend)
+- AI Chatbot widget
+- Light/Dark theme support
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+\`\`\`
+src/
+├── api/            Axios API calls
+├── components/     Reusable UI components (landing, product, seller, admin)
+├── context/        React Context (Auth, Cart, Wishlist, Theme)
+├── pages/          Route-level pages
+├── routes/         Protected route wrappers
+├── types/          TypeScript types
+├── utils/          Helper functions
+\`\`\`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Setup & Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**1. Clone the repository**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+\`\`\`bash
+git clone https://github.com/<your-username>/shopora-frontend.git
+cd shopora-frontend
+\`\`\`
 
-```
+**2. Install dependencies**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+\`\`\`bash
+npm install
+\`\`\`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**3. Create a `.env` file in the root and add**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+\`\`\`env
+VITE_API_BASE_URL=http://localhost:PORT/api
+\`\`\`
 
-```
+**4. Run the development server**
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+**5. Build for production**
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+## 🔗 Related Repositories
+
+- Backend: [shopora-backend](https://github.com/<your-username>/shopora-backend)
+
+## 📄 License
+
+This project is for educational/portfolio purposes.
