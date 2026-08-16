@@ -36,8 +36,8 @@ const sortOptions = [
 const categoryShowcase = [
   {
     name: "Women",
-    image:
-"https://images.pexels.com/photos/4872113/pexels-photo-4872113.jpeg"  },
+    image: "https://images.pexels.com/photos/4872113/pexels-photo-4872113.jpeg",
+  },
   {
     name: "Men",
     image:
@@ -45,8 +45,8 @@ const categoryShowcase = [
   },
   {
     name: "Kids",
-    image:
-"https://images.pexels.com/photos/1619730/pexels-photo-1619730.jpeg"  },
+    image: "https://images.pexels.com/photos/1619730/pexels-photo-1619730.jpeg",
+  },
 ];
 
 function ShopPage() {
@@ -379,7 +379,11 @@ function ShopPage() {
                 aria-label="Sort products"
               >
                 {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
+                  <option
+                    key={option.value}
+                    value={option.value}
+                    className="bg-white text-gray-900"
+                  >
                     {option.label}
                   </option>
                 ))}
