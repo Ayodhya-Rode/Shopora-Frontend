@@ -13,8 +13,8 @@ Shopora is a full-stack multi-role e-commerce platform built with React, TypeScr
 
 ## 🌐 Related Repositories
 
-- **Frontend:** [shopora-frontend](https://github.com/Ayodhya-Rode/Shopora-Frontend)
-- **Backend:** [shopora-backend](https://github.com/Ayodhya-Rode/Shopora-Backend)
+- **Frontend:** [shopora-frontend](https://github.com/sailotech-engineering-pocs/Shopora-ui)
+- **Backend:** [shopora-backend](https://github.com/sailotech-engineering-pocs/Shopora-service)
 
 ---
 
@@ -475,14 +475,14 @@ Orde
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Ayodhya-Rode/Shopora-Frontend.git
-git clone https://github.com/Ayodhya-Rode/Shopora-Backend.git
+git clone https://github.com/sailotech-engineering-pocs/Shopora-ui.git
+git clone https://github.com/sailotech-engineering-pocs/Shopora-service.git
 ```
 
 ### 2. Backend Setup
 
 ```bash
-cd backend
+cd Shopora-service
 npm install
 ```
 
@@ -520,14 +520,14 @@ npm run dev
 ### 3. Frontend Setup
 
 ```bash
-cd frontend
+cd Shopora-ui
 npm install
 ```
 
 Create a `.env` file:
 
 ```env
-VITE_API_BASE_URL=http://localhost:8080/api
+VITE_API_BASE_URL=https://shopora-backend-y33g.onrender.com
 ```
 
 Start the frontend:
