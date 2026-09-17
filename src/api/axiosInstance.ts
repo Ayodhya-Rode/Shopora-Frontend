@@ -64,7 +64,9 @@ axiosInstance.interceptors.response.use(
     if (
       error.response?.status === 401 &&
       !originalRequest._retry &&
-      !originalRequest.url?.includes("refreshToken")
+      !originalRequest.url?.includes("refreshToken") &&
+      !originalRequest.url?.includes("login") &&
+      !originalRequest.url?.includes("register")
     ) {
       originalRequest._retry = true;
 
