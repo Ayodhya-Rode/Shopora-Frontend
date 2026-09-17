@@ -131,7 +131,7 @@ function AdminCategories() {
     toast((t) => (
       <div className="flex flex-col gap-2">
         <p className="text-sm font-medium text-text-primary">
-          Delete "{cat.name}"? Products in this category will be orphaned.
+         Are you sure? Deleting "{cat.name}" will orphan its products.
         </p>
         <div className="flex gap-2">
           <button
@@ -162,7 +162,7 @@ function AdminCategories() {
           </button>
         </div>
       </div>
-    ));
+    ), { duration: Infinity });
   };
 
   return (
