@@ -68,7 +68,7 @@ function SellerDashboard() {
           </button>
         </div>
       </div>
-    ));
+    ), { duration: Infinity });
   };
 
   if (loading) return <p className="p-8">Loading dashboard...</p>;
