@@ -41,7 +41,7 @@ function SellerLogin() {
       const message =
         err?.response?.data?.message ||
         "Invalid email or password. Please try again.";
-      setServerError(message);
+      // setServerError(message);
       toast.error(message);
     } finally {
       setIsLoading(false);
