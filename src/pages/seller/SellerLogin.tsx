@@ -15,6 +15,7 @@ function SellerLogin() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<SellerLoginFormData>();
 
@@ -43,6 +44,7 @@ function SellerLogin() {
         "Invalid email or password. Please try again.";
       // setServerError(message);
       toast.error(message);
+      reset(); 
     } finally {
       setIsLoading(false);
     }

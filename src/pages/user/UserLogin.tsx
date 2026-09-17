@@ -15,6 +15,7 @@ function UserLogin() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<UserLoginFormData>();
 
@@ -41,8 +42,10 @@ function UserLogin() {
       const message =
         err?.response?.data?.message ||
         "Invalid email or password. Please try again.";
-      setServerError(message);
+      // setServerError(message);
       toast.error(message);
+      reset(); 
+
     } finally {
       setIsLoading(false);
     }
