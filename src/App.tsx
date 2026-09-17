@@ -185,7 +185,16 @@ function App() {
         <Route path="/returns" element={<ReturnsPage />} />
       </Routes>
 
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          duration: 2000,
+          style: {
+            background: "var(--color-surface-card)",
+            color: "var(--color-text-primary)",
+            border: "1px solid var(--color-border-default)",
+          },
+        }}
+      />
       <ChatWidget />
     </BrowserRouter>
   );
