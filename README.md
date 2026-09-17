@@ -17,6 +17,15 @@ Shopora is a full-stack multi-role e-commerce platform built with React, TypeScr
 - **Backend:** [shopora-backend](https://github.com/sailotech-engineering-pocs/Shopora-service)
 
 ---
+## Testing Credentials (Admin Access)
+
+For testing/review purposes, use the following admin credentials:
+
+- **URL:** https://shopora-frontend-wxiy.onrender.com/admin-login
+- **Email:** ayodhyarode168@gmail.com
+- **Password:** SuperAdmin@123
+
+
 
 ## 🚀 Tech Stack
 
